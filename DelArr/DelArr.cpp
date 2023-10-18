@@ -11,38 +11,21 @@ using namespace std;
 //		delete[] * ppArr;
 //		*ppArr = NULL;
 //	}
+ /*int* pArr = NULL;
+
+pArr = new int[256];
+DelArr(&pArr); */
 //}
 
 int main()
 {
-	/*int* pArr = NULL;
-
-	pArr = new int[256];
-	DelArr(&pArr);*/
-	int seconds=0;
+	
+	
 	int minutes;
 	cout << "秒数を入力してください。" << endl;
 	cin >> minutes;
-	for (;;)
-	{
-		if (minutes <= 60)
-		{
-			break;
-		}
-		else
-		{
-			minutes -= 60;
-			seconds++;
-		}
-	}
-	if (minutes <= 9)
-	{
-		cout << seconds << "/" << 0 <<minutes << "秒";
-	}
-	else
-	{
-		cout << seconds << "/" << minutes<<"秒";
-	}
+	
+	cout << minutes / 60 << "/" << minutes - (minutes / 60) * 60 << "秒" << endl;
 
 	
 }

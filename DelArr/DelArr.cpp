@@ -25,7 +25,15 @@ int main()
 	cout << "秒数を入力してください。" << endl;
 	cin >> minutes;
 	
-	cout << minutes / 60 << "/" << minutes - (minutes / 60) * 60 << "秒" << endl;
+	if (minutes - (minutes / 60) * 60 <= 9)
+	{
+		cout << minutes / 60 << "/0" << minutes - (minutes / 60) * 60 << "秒" << endl;
+	}
+	else
+	{
+		cout << minutes / 60 << "/" << minutes - (minutes / 60) * 60 << "秒" << endl;
+	}
+	
 
 	
 }
